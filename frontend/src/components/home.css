@@ -1,0 +1,102 @@
+
+.todobox{
+    background-color:rgb(185, 181, 172);
+    min-height: 100vh;
+    height: 100%;
+    
+}
+.name {
+    background-color: rgb(23, 142, 51);
+    height: 70px;
+    padding-top : 5px;
+    
+    text-align: center;
+    
+    
+}
+
+    .listblock{
+        margin:10px;
+        padding:10px;
+        
+    }
+    .content{
+        
+        margin-bottom: 10px;
+        
+        
+    }
+    .check{
+        width: 20px;
+        margin-left: 30cm;
+        border: 2px solid black;
+    }
+.c{
+    background-color: white;
+    margin: 20px;
+    padding: 5px;
+     text-align: left;
+    /* border: 2px solid black; */
+    display: flex;
+    border-radius: 10px;
+ 
+}
+.c span{ 
+     margin-left: 10px;
+     display: inline-block;
+     width: 900px;
+     flex: 1;
+     font-size: 15px;
+    font-size: 20px;
+    font-style: oblique;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.todo-input{
+    display:flex;
+    border: 2px solid black;
+    margin-top: 20px;
+    background-color: aqua;
+    width: 50%;
+    margin-left: 290px;
+}
+.todo-input button{
+    width:100px;
+    height:50px;
+    margin-left: 100px;
+    margin-top: 7px;
+    border-radius: 10px;
+}
+.todo-input button:hover{
+    cursor: pointer;
+}
+.todo-input input::placeholder{
+    font-weight: bolder;
+    font-size: large;
+}
+.logout-btn{
+    width: 100px;
+    background-color: red;
+    border-radius: 10px;
+    margin-left: 650px ;
+    margin-bottom: 10px;
+}
+.logout-btn,.deleteBtn:hover{
+    cursor: pointer;
+}
+.deleteBtn{
+    width:80px;
+    font-size: 20px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.c input{
+    margin-left: 0px;
+}
+.logout-btn:active{
+    background-color: rgb(84, 5, 5);
+}

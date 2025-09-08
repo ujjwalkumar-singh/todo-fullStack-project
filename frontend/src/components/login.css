@@ -1,0 +1,69 @@
+
+
+.container{
+     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+     /* background-color: aliceblue; */
+     /* border:2px solid black; */
+     padding: 10px;
+     width: 500px;
+     margin-top: 150px;
+     margin-left: 450px;
+     border-radius: 10px;
+}
+input{
+    display: block;
+    width: 450px;
+    /* border-radius: 5px; */
+    border-style: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    margin: 15px;
+}
+label{
+    font-size: x-large;
+    font-weight: bold;
+}
+.form{
+    /* background-color: rgb(131, 164, 222); */
+    /* border: red solid 3px; */
+    box-shadow: 4px;
+    margin-top: 200px;
+    margin-left:200px ;
+    height: 300px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+}
+button{
+    color: white;
+    padding: 7px;
+    border-style: none;
+    margin-left:20px;
+    font-size: x-large;
+    /* border-radius: 10px; */
+    width: 94%;
+    background-color: rgb(0, 136, 255);
+
+}
+input::placeholder {
+  font-size: 15px;   /* set desired size */
+  color: #888;       /* optional: change color */
+  font-weight: 100;  /* optional: make it bold */
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: blue;
+}
+input:focus {
+  border-color: blue;
+  border-width: 4px; /* slightly thicker on focus */
+}
+button:hover:active{
+    cursor: pointer;
+}
+button:active{
+    background-color: green;
+}
