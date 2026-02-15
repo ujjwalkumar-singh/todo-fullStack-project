@@ -29,15 +29,15 @@ function Login() {
           showConfirmButton: false
         });
 
-        await axios.get(
-          "https://todo-fullstack-project-1.onrender.com/user/profile",
-          { withCredentials: true }
-        );
+        // await axios.get(
+        //   "https://todo-fullstack-project-1.onrender.com/user/profile",
+        //   { withCredentials: true }
+        // );
 
-        navigate("/");
-        //     setTimeout(() => {
-        //     navigate("/");
-        // }, 1000);
+        // navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 1000);
       }).catch(err => {
         // console.log(err);
 

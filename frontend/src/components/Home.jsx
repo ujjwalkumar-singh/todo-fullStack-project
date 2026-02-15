@@ -50,9 +50,9 @@
 //         async function fetchData() {
 
 //             try {
-                
+
 //             } catch (error) {
-                
+
 //             }
 //             await axios.get("https://todo-fullstack-project-1.onrender.com/user/profile", {
 //                 withCredentials: true
@@ -108,7 +108,7 @@
 //                 withCredentials: true
 //             }
 //         ).then(res => {
-            
+
 
 //             // fetchTodo();//, it works but not optimal
 //             setTodoList(prev => [...prev, res.data.todo])
@@ -205,7 +205,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import Login from "./Login.jsx";
 import "./home.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -355,8 +355,9 @@ function Home() {
 
     // ================= NOT LOGGED IN =================
     if (!user) {
-        return <Login />;
+        return <Navigate to="/login" replace />;
     }
+
 
     // ================= MAIN UI =================
     return (
