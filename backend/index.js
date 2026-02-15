@@ -11,13 +11,14 @@ const port=Number(process.env.PORT)||3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:true,
+  // origin:"http://localhost:5173",
   credentials:true
 }))
 app.get("/",(req,res)=>{
   res.send("hellow world");
 })
-connectDB()
+await connectDB()
 app.use("/todo",todoRoute); 
 app.use("/user",user);
 console.log(port);
