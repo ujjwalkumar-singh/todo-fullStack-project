@@ -11,8 +11,8 @@ const port=Number(process.env.PORT)||3000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin:true,
-  // origin:"http://localhost:5173",
+  // origin:true,
+  origin:"https://todo-fullstack-project-2.onrender.com",
   credentials:true
 }))
 app.get("/",(req,res)=>{
