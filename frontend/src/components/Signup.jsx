@@ -15,7 +15,7 @@ function Signup() {
     const handleform = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/user/register", {
+            const response = await axios.post("https://todo-fullstack-project-1.onrender.com/user/register", {
                 username,
                 email,
                 password

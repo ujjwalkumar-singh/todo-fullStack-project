@@ -16,7 +16,7 @@ function Home() {
 
     const handleDelete = async (_id) => {
         // console.log("delete function called");
-        await axios.post(`http://localhost:5000/todo/delete/${_id}`, {}, {
+        await axios.post(`https://todo-fullstack-project-1.onrender.com/todo/delete/${_id}`, {}, {
             withCredentials: true
         }).then(res => {
             // console.log("res in deletefunction");
@@ -29,7 +29,7 @@ function Home() {
     }
 
     const fetchTodo = async () => {
-        await axios.get("http://localhost:5000/todo/get", {
+        await axios.get("https://todo-fullstack-project-1.onrender.com/todo/get", {
             withCredentials: true
         })
             .then(res => {
@@ -49,7 +49,7 @@ function Home() {
     }
     useEffect(() => {
         async function fetchData() {
-            await axios.get("http://localhost:5000/user/profile", {
+            await axios.get("https://todo-fullstack-project-1.onrender.com/user/profile", {
                 withCredentials: true
             }).then(res => {
                 // console.log(res.data.user.username);
@@ -66,7 +66,7 @@ function Home() {
     }
 
     const handlelogout = async () => {
-        await axios.post("http://localhost:5000/user/logout",
+        await axios.post("https://todo-fullstack-project-1.onrender.com/user/logout",
             {},
             {
                 withCredentials: true
@@ -95,7 +95,7 @@ function Home() {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:5000/todo/create", {
+        await axios.post("https://todo-fullstack-project-1.onrender.com/todo/create", {
             name,
             completed: false
         },
@@ -123,7 +123,7 @@ function Home() {
 
 
     const handlecheck = async (todo) => {
-        await axios.post(`http://localhost:5000/todo/update/${todo._id}`, {}, {
+        await axios.post(`https://todo-fullstack-project-1.onrender.com/todo/update/${todo._id}`, {}, {
             withCredentials: true
         }).then(res => {
             const updatedtodo = res.data.availabletodo
