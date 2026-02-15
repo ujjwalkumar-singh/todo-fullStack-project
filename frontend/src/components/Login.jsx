@@ -18,22 +18,29 @@ function Login() {
     },
       {
         withCredentials: true
-      }).then(res => {
-        
-                    const MySwal = withReactContent(Swal);
-        
-                    MySwal.fire({
-                        icon: 'success',
-                        title: res?.data?.message,
-                        timer: 1500,
-                        showConfirmButton: false
-                    });
-        
-       
+      }).then(async (res) => {
+
+        const MySwal = withReactContent(Swal);
+
+        MySwal.fire({
+          icon: 'success',
+          title: res?.data?.message,
+          timer: 1500,
+          showConfirmButton: false
+        });
+
+        await axios.get(
+          "https://todo-fullstack-project-1.onrender.com/user/profile",
+          { withCredentials: true }
+        );
+
         navigate("/");
+        //     setTimeout(() => {
+        //     navigate("/");
+        // }, 1000);
       }).catch(err => {
         // console.log(err);
-        
+
         toast.error(err.response?.data?.message || "some thing went wrong", {
           position: "top-center",
           autoClose: 1000, // 1 seconds
@@ -65,7 +72,7 @@ function Login() {
         <button type="submit">Log In</button>
         <p>Not Registered ? <Link className="link" to="/register">Sign Up</Link></p>
       </form>
-        <ToastContainer/>
+      <ToastContainer />
     </div>
   )
 }
